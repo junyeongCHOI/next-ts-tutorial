@@ -1,0 +1,28 @@
+@mixin soft_shadow {
+  box-shadow: 0 5px 10px 0 rgb(0 64 128 / 5%);
+}
+
+@mixin shadow {
+  box-shadow: 0 10px 40px -10px rgb(0 64 128 / 20%);
+}
+
+@keyframes drop {
+  0% {
+    transform: scaleY(0.5);
+    opacity: 0;
+  }
+}
+@keyframes item {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes place {
+  0% {
+    transform: scaleY(1.2);
+    filter: brightness(300%);
+    filter: hue-rotate(50deg);
+  }
+}
