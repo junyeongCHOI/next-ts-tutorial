@@ -6,7 +6,7 @@ const MainLayout = () => {
       <div className={styles.header}>
         <div className={styles.menu_wrap}></div>
       </div>
-      <div className={styles.container}>test</div>
+      <div className={styles.container}></div>
     </div>
   );
 };
