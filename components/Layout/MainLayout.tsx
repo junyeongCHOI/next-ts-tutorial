@@ -1,8 +1,8 @@
-import type { ReactChildren } from "react";
+import type { ReactNode } from "react";
 import styles from "./MainLayout.module.scss";
 
 interface MainLayoutProps {
-  children?: ReactChildren;
+  children?: ReactNode;
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {

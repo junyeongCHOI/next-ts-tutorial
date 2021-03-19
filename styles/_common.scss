@@ -1,9 +1,11 @@
 @mixin soft_shadow {
   box-shadow: 0 5px 10px 0 rgb(0 64 128 / 5%);
+  transition: box-shadow 0.3s;
 }
 
 @mixin shadow {
   box-shadow: 0 10px 40px -10px rgb(0 64 128 / 20%);
+  transition: box-shadow 0.3s;
 }
 
 @keyframes drop {
