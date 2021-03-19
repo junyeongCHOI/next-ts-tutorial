@@ -21,6 +21,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & > i {
+      font-size: 28px;
+      color: #bccddf;
+      cursor: pointer;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+
+    & > img {
+      width: 28px;
+      margin-right: 11px;
+    }
   }
 }
 

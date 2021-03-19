@@ -1,18 +1,6 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class _document extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-
-    return initialProps;
-  }
-
   render() {
     return (
       <Html>
@@ -21,6 +9,10 @@ class _document extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap"
             rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
           />
         </Head>
         <body>

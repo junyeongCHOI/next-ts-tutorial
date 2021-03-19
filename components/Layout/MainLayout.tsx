@@ -1,12 +1,23 @@
+import type { ReactChildren } from "react";
 import styles from "./MainLayout.module.scss";
 
-const MainLayout = () => {
+interface MainLayoutProps {
+  children?: ReactChildren;
+}
+
+const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className={styles.wrap}>
       <div className={styles.header}>
-        <div className={styles.menu_wrap}></div>
+        <div className={styles.menu_wrap}>
+          <div className={styles.logo}>
+            <img src="images/logo.png" alt="logo" />
+            Color Hunt
+          </div>
+          <i className="xi-ellipsis-h" />
+        </div>
       </div>
-      <div className={styles.container}></div>
+      <div className={styles.container}>{children}</div>
     </div>
   );
 };
