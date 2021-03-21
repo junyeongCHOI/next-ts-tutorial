@@ -24,11 +24,12 @@ moment.updateLocale("en", {
 
 interface ColorCardProps {
   data: Color;
+  animationDelay: string;
 }
 
-const ColorCard = ({ data }: ColorCardProps) => {
+const ColorCard = ({ data, animationDelay }: ColorCardProps) => {
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrap} style={{ animationDelay }}>
       <div className={styles.palette}></div>
       <div className={styles.utils}>
         <div className={styles.like}>
