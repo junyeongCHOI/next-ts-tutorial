@@ -1,5 +1,6 @@
-import styles from "./ColorCard.module.scss";
 import moment from "moment";
+import colorSlicer from "../../utils/colorSlicer";
+import styles from "./ColorCard.module.scss";
 import { Color } from "../../pages/api/colors";
 
 moment.updateLocale("en", {
@@ -30,7 +31,16 @@ interface ColorCardProps {
 const ColorCard = ({ data, animationDelay }: ColorCardProps) => {
   return (
     <div className={styles.wrap} style={{ animationDelay }}>
-      <div className={styles.palette}></div>
+      <div className={styles.palette}>
+        {colorSlicer(data.code).map((color, index) => (
+          <div
+            className={`${styles.place} ${styles[`p${index}`]}`}
+            style={{ backgroundColor: color }}
+          >
+            <span>{color}</span>
+          </div>
+        ))}
+      </div>
       <div className={styles.utils}>
         <div className={styles.like}>
           <i className="xi-heart" />

@@ -19,8 +19,60 @@
   padding-bottom: 100%;
   border-radius: 6px;
   overflow: hidden;
+  position: relative;
+  font-size: 14px;
 
-  background-color: pink;
+  .place {
+    position: absolute;
+    width: 100%;
+    animation-name: place;
+
+    & > span {
+      position: absolute;
+      text-align: center;
+      transition: all 0.2s;
+      bottom: 0;
+      color: #fff;
+      opacity: 0;
+      text-transform: uppercase;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 4px 6px;
+      border-radius: 0 3px 0 0;
+      cursor: pointer;
+      letter-spacing: 1px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &:hover span {
+      opacity: 1;
+    }
+  }
+
+  .p0 {
+    padding-bottom: 100%;
+    animation-duration: 0s;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .p1 {
+    padding-bottom: 85%;
+    animation-duration: 0.2s;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .p2 {
+    padding-bottom: 67%;
+    animation-duration: 0.6s;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .p3 {
+    padding-bottom: 41%;
+    animation-duration: 1s;
+  }
 }
 
 .utils {
